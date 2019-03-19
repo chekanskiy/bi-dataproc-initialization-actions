@@ -23,7 +23,7 @@ PY4J_ZIP=$(ls /usr/lib/spark/python/lib/py4j-*.zip)
 PY4J_ZIP=$(echo ${PY4J_ZIP} | cut -d ' ' -f 1)
 echo "Found PY4J_ZIP: '${PY4J_ZIP}'" >&2
 
-COMMON_PACKAGES='org.vegas-viz:vegas_2.11:0.3.11,org.vegas-viz:vegas-spark_2.11:0.3.11'
+COMMON_PACKAGES='org.vegas-viz:vegas_2.11:0.3.11,org.vegas-viz:vegas-spark_2.11:0.3.11,ml.dmlc:xgboost4j-spark:0.82,ml.dmlc:xgboost4j:0.82,ml.sparkling:sparkling-graph-examples_2.11:0.0.7'
 if (( "${SPARK_MAJOR_VERSION}" >= 2 )); then
   PACKAGES_ARG="--packages ${COMMON_PACKAGES}"
 else
