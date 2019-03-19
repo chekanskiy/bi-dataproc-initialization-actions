@@ -12,7 +12,7 @@ set -exo pipefail
 
 readonly ROLE="$(/usr/share/google/get_metadata_value attributes/dataproc-role)"
 readonly INIT_ACTIONS_REPO="$(/usr/share/google/get_metadata_value attributes/INIT_ACTIONS_REPO \
-  || echo 'https://github.com/GoogleCloudPlatform/dataproc-initialization-actions.git')"
+  || echo 'https://github.com/StyleLounge/bi-dataproc-initialization-actions.git')"
 readonly INIT_ACTIONS_BRANCH="$(/usr/share/google/get_metadata_value attributes/INIT_ACTIONS_BRANCH \
   || echo 'master')"
 
