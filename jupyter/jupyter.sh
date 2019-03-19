@@ -23,7 +23,7 @@ readonly JUPYTER_CONDA_CHANNELS="$(/usr/share/google/get_metadata_value attribut
 readonly JUPYTER_CONDA_PACKAGES="$(/usr/share/google/get_metadata_value attributes/JUPYTER_CONDA_PACKAGES)"
 
 echo "Cloning fresh dataproc-initialization-actions from repo ${INIT_ACTIONS_REPO} and branch ${INIT_ACTIONS_BRANCH}..."
-git clone -b "${INIT_ACTIONS_BRANCH}" --single-branch "${INIT_ACTIONS_REPO}"
+git clone -b "${INIT_ACTIONS_BRANCH}" --single-branch "${INIT_ACTIONS_REPO}" dataproc-initialization-actions
 
 # Ensure we have conda installed.
 bash ./dataproc-initialization-actions/conda/bootstrap-conda.sh
